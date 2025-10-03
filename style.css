@@ -1,0 +1,143 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container with two panels */
+.container {
+  display: flex;
+  width: 900px;
+  height: 520px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Left panel (welcome / branding) */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #4f8cff, #1d5dbf);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.left-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.left-panel p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Right panel (form area) */
+.right-panel {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-panel h3 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+/* Form styles */
+form .form-label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #444;
+}
+
+form .form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  transition: border 0.2s;
+}
+
+form .form-control:focus {
+  border-color: #4f8cff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(79, 140, 255, 0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login {
+  background: #4f8cff;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background: #3a6ed9;
+}
+
+.btn-register {
+  background: #1d5dbf;
+  color: #fff;
+}
+
+.btn-register:hover {
+  background: #15468f;
+}
+
+/* Error messages from jQuery validation */
+label.error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+  .left-panel {
+    padding: 30px;
+  }
+  .right-panel {
+    padding: 30px;
+  }
+}
